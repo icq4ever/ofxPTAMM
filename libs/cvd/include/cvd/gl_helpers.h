@@ -532,21 +532,21 @@ namespace CVD
 	}
 
 	namespace Internal{
-			static inline int alignof(const void* ptr)
-			{
-				size_t p = (size_t)ptr;
+			// static inline int alignof(const void* ptr)
+			// {
+			// 	size_t p = (size_t)ptr;
 
-				if(p&3)
-					if(p&1)
-						return 1;
-					else 
-						return 2;
-				else
-					if(p&4)
-						return 4;
-					else
-						return 8;
-			}
+			// 	if(p&3)
+			// 		if(p&1)
+			// 			return 1;
+			// 		else 
+			// 			return 2;
+			// 	else
+			// 		if(p&4)
+			// 			return 4;
+			// 		else
+			// 			return 8;
+			// }
 	}
 
  	/// Draw an image to the frame buffer at the current raster position.
