@@ -1,6 +1,6 @@
-#include "testApp.h"
+#include "ofApp.h"
 
-void testApp::setup(){
+void ofApp::setup(){
 	ofEnableAlphaBlending();
 	ofBackground(255,255,255);
 	ofSetVerticalSync(true);
@@ -24,7 +24,7 @@ void testApp::setup(){
     logo.loadImage("of.png");
 }
 
-void testApp::update(){
+void ofApp::update(){
     grabber.update();
     
     if (grabber.isFrameNew()){
@@ -40,7 +40,7 @@ void testApp::update(){
     ofSetWindowTitle(ofToString(ofGetFrameRate()));
 }
 
-void testApp::draw(){
+void ofApp::draw(){
     ofSetColor(255, 255);
     video.draw(0,0);
     
@@ -73,7 +73,7 @@ void testApp::draw(){
 }
 
 
-void testApp::keyPressed(int key){
+void ofApp::keyPressed(int key){
 	switch (key){
 		case ' ':
 			ptamm.buildMap();
@@ -121,31 +121,31 @@ void testApp::keyPressed(int key){
 	}
 }
 
-void testApp::keyReleased(int key){ 
+void ofApp::keyReleased(int key){ 
 
 }
 
-void testApp::mouseMoved(int x, int y ){ 
+void ofApp::mouseMoved(int x, int y ){ 
 
 }
 
-void testApp::mouseDragged(int x, int y, int button){
+void ofApp::mouseDragged(int x, int y, int button){
     
 }
 
-void testApp::mousePressed(int x, int y, int button) {
+void ofApp::mousePressed(int x, int y, int button) {
 	
 }
 
-void testApp::mouseReleased(){
+void ofApp::mouseReleased(){
 
 }
 
-void testApp::mouseReleased(int x, int y, int button){
+void ofApp::mouseReleased(int x, int y, int button){
     
 }
 
-void testApp::windowResized(int w, int h){
+void ofApp::windowResized(int w, int h){
     
 }
 
