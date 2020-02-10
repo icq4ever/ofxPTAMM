@@ -26,11 +26,15 @@
 #include "MiniPatch.h"
 #include "Relocaliser.h"
 
+
 #include "gvars3/instances.h"
 
 #include <sstream>
 #include <vector>
 #include <list>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define NUM_LOST_FRAMES 3
 
