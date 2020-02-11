@@ -1,5 +1,3 @@
-#ifndef _TEST_APP
-#define _TEST_APP
 
 #include "ofMain.h"
 #include "ofxPTAMM.h"
@@ -9,13 +7,15 @@
 #include "ofxCameraCalibrator.h"
 #endif
 
-class testApp : public ofBaseApp{
+class ofApp : public ofBaseApp{
 public:
     void setup();
     void update();
     void draw();
 
-    void keyPressed  (int key);
+    void ofAppPressed  (int ofApp);
+    void ofAppReleased(int ofApp);
+    void keyPressed(int key);
     void keyReleased(int key);
     void mouseMoved(int x, int y );
     void mouseDragged(int x, int y, int button);
@@ -37,4 +37,3 @@ public:
     
     int			camWidth, camHeight;
 };
-#endif
