@@ -28,10 +28,12 @@ void ofApp::update(){
     grabber.update();
     
     if (grabber.isFrameNew()){
-        video.setFromPixels(grabber.getPixels(),camWidth,camHeight,OF_IMAGE_COLOR);
+//		ofPixels pixels = grabber.getPixels();
+		video.setFromPixels(grabber.getPixels().getData(), grabber.getWidth(),grabber.getHeight(),OF_IMAGE_COLOR);
+//		video.setFromPixels(grabber.getPixelsRef(), camWidth, camHeight, OF_IMAGE_COLOR);
         video.mirror(false, true);
         video.update();
-        ptamm.update( video.getPixels() );
+		ptamm.update( video.getPixels().getData());
 #ifdef CAMARACALIBRATION
         ccam.update( video.getPixels() );
 #endif
@@ -137,9 +139,6 @@ void ofApp::mousePressed(int x, int y, int button) {
 	
 }
 
-void ofApp::mouseReleased(){
-
-}
 
 void ofApp::mouseReleased(int x, int y, int button){
     
