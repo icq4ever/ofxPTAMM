@@ -17,6 +17,7 @@
 #include <vector>
 #include <map>
 #include <cvd/thread.h>
+#include <unistd.h>
 
 #include "tinyxml.h"
 

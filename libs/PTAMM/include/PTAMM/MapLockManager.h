@@ -13,6 +13,7 @@
 #define __MAP_LOCK_MANAGER__
 
 #include <map>
+#include <unistd.h>
 #include "cvd/thread.h"
 
 namespace PTAMM {
